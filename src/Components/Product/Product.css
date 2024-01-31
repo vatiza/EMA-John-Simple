@@ -65,3 +65,6 @@
     position: absolute;
     bottom: 0;
 }
+.addtocart-btn:hover{
+    background: #df8704;
+}
