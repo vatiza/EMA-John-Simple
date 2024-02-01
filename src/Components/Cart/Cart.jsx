@@ -1,3 +1,4 @@
+/* eslint-disable react/prop-types */
 import './Cart.css';
 
 const Cart = ({ cart }) => {
@@ -11,9 +12,6 @@ const Cart = ({ cart }) => {
     }
     const tax = total * 4 / 100;
     const grandTotal = total + totalShipping + tax;
-    console.log(grandTotal)
-
-
 
     return (
         <div className='cart'>
