@@ -1,0 +1,17 @@
+.cart {
+    background-color: #eca63d;
+    width: 220px;
+    height: 944px;
+    padding: 15px;
+    position: sticky;
+    top: 0;
+
+}
+
+.cart p {
+    font-size: 17px;
+}
+
+.cart h6 {
+    font-size: 18px;
+}
