@@ -13,9 +13,12 @@ const Shop = () => {
     }, []);
     useEffect(() => {
         const storeCart = getShoppingCart();
-        console.log(storeCart);
+        for (const id in storeCart) {
+            const savedProduct = products.find(product => product.id === id);
+            console.log(savedProduct);
+        }
 
-    }, [])
+    }, [products])
 
     const [cart, setCart] = useState([])
     const handleAddToCart = (product) => {
