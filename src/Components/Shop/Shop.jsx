@@ -12,12 +12,19 @@ const Shop = () => {
             .then(data => setProducts(data));
     }, []);
     useEffect(() => {
-        const storeCart = getShoppingCart();
-        for (const id in storeCart) {
-            const savedProduct = products.find(product => product.id === id);
-            console.log(savedProduct);
+        const storedCart = getShoppingCart();
+        const savedCart = [];
+        for (const id in storedCart) {
+            const addedProduct = products.find(product => product.id === id);
+            //get quantity of the product
+            if (addedProduct) {
+                const quantity = storedCart[id];
+                addedProduct.quantity = quantity;
+                //add the added product to saved cart
+                savedCart.push(addedProduct);
+            }
         }
-
+        setCart(savedCart);
     }, [products])
 
     const [cart, setCart] = useState([])
