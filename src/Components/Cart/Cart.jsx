@@ -2,6 +2,7 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import './Cart.css';
 import { faTrash, faPlay } from '@fortawesome/free-solid-svg-icons';
+import { Link } from 'react-router-dom';
 
 const Cart = ({ cart, handleClearCart, children }) => {
     // const cart = props.cart;
@@ -29,8 +30,9 @@ const Cart = ({ cart, handleClearCart, children }) => {
             <button onClick={handleClearCart} className='clear-btn'>Clear Cart
                 <FontAwesomeIcon icon={faTrash} />
             </button>
-            <button className='checkout-btn'>Proceed Checkout <FontAwesomeIcon icon={faPlay} />
-            </button>
+
+
+           
             {children}
         </div>
     );
