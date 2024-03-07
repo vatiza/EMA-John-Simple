@@ -1,11 +1,34 @@
 .cart {
-    background-color: #eca63d;
+    background-color: rgba(255, 153, 0, 0.30);
     width: 90;
     height: 100%;
     padding: 15px;
     position: sticky;
     top: 0;
 
+}
+
+.checkout-btn {
+    width: 230px;
+    height: 56px;
+    border-radius: 4px;
+    background: #F90;
+    margin-top: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+
+.clear-btn {
+    width: 230px;
+    height: 56px;
+    border-radius: 4px;
+    background: #FF3030;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
 .cart p {

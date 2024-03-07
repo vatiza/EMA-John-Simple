@@ -1,7 +1,9 @@
 /* eslint-disable react/prop-types */
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import './Cart.css';
+import { faTrash, faPlay } from '@fortawesome/free-solid-svg-icons';
 
-const Cart = ({ cart }) => {
+const Cart = ({ cart, handleClearCart }) => {
     // const cart = props.cart;
     // const { cart } = props;
     let total = 0;
@@ -24,6 +26,11 @@ const Cart = ({ cart }) => {
             <p>Total Shipping:$ {totalShipping}</p>
             <p>Tax:$ {tax.toFixed(2)}</p>
             <h6>Grand Total:$ {grandTotal.toFixed(2)}</h6>
+            <button onClick={handleClearCart} className='clear-btn'>Clear Cart
+                <FontAwesomeIcon icon={faTrash} />
+            </button>
+            <button className='checkout-btn'>Proceed Checkout <FontAwesomeIcon icon={faPlay} />
+            </button>
         </div>
     );
 };
