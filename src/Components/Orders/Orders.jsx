@@ -40,7 +40,10 @@ const Orders = () => {
             <div className="cart-container">
                 <Cart cart={savedCart}
                     handleClearCart={handleClearCart}
-                ></Cart>
+                >
+<div>form orders</div>
+
+                </Cart>
             </div>
         </div>
     );

@@ -55,7 +55,12 @@ const Shop = () => {
 
             <div className='cart-container'>
                 <Cart cart={cart}
-                    handleClearCart={handleClearCart}></Cart>
+                    handleClearCart={handleClearCart} >
+
+                    <div>
+                        from shop
+                    </div>
+                </Cart>
             </div>
         </div>
     );
