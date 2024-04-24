@@ -1,8 +1,9 @@
-# React + Vite
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## [![Repography logo](https://images.repography.com/logo.svg)](https://repography.com) / Recent activity [![Time period](https://images.repography.com/33855154/vatiza/EMA-John-Simple/recent-activity/Bvi0fOpz9FLMYKshNq9e3qXOCUq8-Hd9hzTuu3enHKE/McCLIkbHfL12Njv6OjY8TZlwmI3UDvVPdXe-tMjyDZ8_badge.svg)](https://repography.com)
+[![Timeline graph](https://images.repography.com/33855154/vatiza/EMA-John-Simple/recent-activity/Bvi0fOpz9FLMYKshNq9e3qXOCUq8-Hd9hzTuu3enHKE/McCLIkbHfL12Njv6OjY8TZlwmI3UDvVPdXe-tMjyDZ8_timeline.svg)](https://github.com/vatiza/EMA-John-Simple/commits)
+[![Issue status graph](https://images.repography.com/33855154/vatiza/EMA-John-Simple/recent-activity/Bvi0fOpz9FLMYKshNq9e3qXOCUq8-Hd9hzTuu3enHKE/McCLIkbHfL12Njv6OjY8TZlwmI3UDvVPdXe-tMjyDZ8_issues.svg)](https://github.com/vatiza/EMA-John-Simple/issues)
+[![Pull request status graph](https://images.repography.com/33855154/vatiza/EMA-John-Simple/recent-activity/Bvi0fOpz9FLMYKshNq9e3qXOCUq8-Hd9hzTuu3enHKE/McCLIkbHfL12Njv6OjY8TZlwmI3UDvVPdXe-tMjyDZ8_prs.svg)](https://github.com/vatiza/EMA-John-Simple/pulls)
+[![Trending topics](https://images.repography.com/33855154/vatiza/EMA-John-Simple/recent-activity/Bvi0fOpz9FLMYKshNq9e3qXOCUq8-Hd9hzTuu3enHKE/McCLIkbHfL12Njv6OjY8TZlwmI3UDvVPdXe-tMjyDZ8_words.svg)](https://github.com/vatiza/EMA-John-Simple/commits)
+[![Top contributors](https://images.repography.com/33855154/vatiza/EMA-John-Simple/recent-activity/Bvi0fOpz9FLMYKshNq9e3qXOCUq8-Hd9hzTuu3enHKE/McCLIkbHfL12Njv6OjY8TZlwmI3UDvVPdXe-tMjyDZ8_users.svg)](https://github.com/vatiza/EMA-John-Simple/graphs/contributors)
+[![Activity map](https://images.repography.com/33855154/vatiza/EMA-John-Simple/recent-activity/Bvi0fOpz9FLMYKshNq9e3qXOCUq8-Hd9hzTuu3enHKE/McCLIkbHfL12Njv6OjY8TZlwmI3UDvVPdXe-tMjyDZ8_map.svg)](https://github.com/vatiza/EMA-John-Simple/commits)
 
-Currently, two official plugins are available:
-
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
