@@ -22,7 +22,7 @@ const Shop = () => {
     const storedCart = getShoppingCart();
     const savedCart = [];
     for (const id in storedCart) {
-      const addedProduct = products.find((product) => product.id === id);
+      const addedProduct = products.find((product) => product._id === id);
       //get quantity of the product
       if (addedProduct) {
         const quantity = storedCart[id];
@@ -38,7 +38,7 @@ const Shop = () => {
   const handleAddToCart = (product) => {
     const newCart = [...cart, product];
     setCart(newCart);
-    addToDb(product.id);
+    addToDb(product._id);
   };
 
   const handleClearCart = () => {
@@ -51,7 +51,7 @@ const Shop = () => {
       <div className="product-container">
         {products.map((product) => (
           <Product
-            key={product.id}
+            key={product._id}
             product={product}
             handleAddToCart={handleAddToCart}
           ></Product>
