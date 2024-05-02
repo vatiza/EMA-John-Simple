@@ -1,7 +1,7 @@
 import { faListCheck } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { useEffect, useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useLoaderData } from "react-router-dom";
 import Cart from "../Cart/Cart";
 import Product from "../Product/Product";
 import {
@@ -13,6 +13,16 @@ import "./Shop.css";
 
 const Shop = () => {
   const [products, setProducts] = useState([]);
+  const { totalProducts } = useLoaderData();
+
+  const itemPerPage = 10;
+  const totalPages = Math.ceil(totalProducts / itemPerPage);
+  // const pageNumbers = [];
+  // for (let i = 0; i <= totalPages; i++) {
+  //   pageNumbers.push(i);
+  const pageNumbers = [...Array(totalPages).keys()];
+ 
+
   useEffect(() => {
     fetch("http://localhost:5000/products")
       .then((res) => res.json())
@@ -47,27 +57,38 @@ const Shop = () => {
   };
 
   return (
-    <div className="shop-container">
-      <div className="product-container">
-        {products.map((product) => (
-          <Product
-            key={product._id}
-            product={product}
-            handleAddToCart={handleAddToCart}
-          ></Product>
-        ))}
-      </div>
+    <>
+      <div className="shop-container">
+        <div className="product-container">
+          {products.map((product) => (
+            <Product
+              key={product._id}
+              product={product}
+              handleAddToCart={handleAddToCart}
+            ></Product>
+          ))}
+        </div>
 
-      <div className="cart-container">
-        <Cart cart={cart} handleClearCart={handleClearCart}>
-          <Link to="/orders">
-            <button className="checkout-btn">
-              Review Order <FontAwesomeIcon icon={faListCheck} />
-            </button>
-          </Link>
-        </Cart>
+        <div className="cart-container">
+          <Cart cart={cart} handleClearCart={handleClearCart}>
+            <Link to="/orders">
+              <button className="checkout-btn">
+                Review Order <FontAwesomeIcon icon={faListCheck} />
+              </button>
+            </Link>
+          </Cart>
+        </div>
       </div>
-    </div>
+      {/* pagination */}
+      <div className="pagination">
+        {
+          pageNumbers.map(number=><button
+          key={number}
+          >{number}</button>)
+        }
+         
+      </div>
+    </>
   );
 };
 

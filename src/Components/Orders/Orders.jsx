@@ -1,19 +1,19 @@
+import { faCreditCard } from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { useState } from "react";
 import { Link, useLoaderData } from "react-router-dom";
 import Cart from "../Cart/Cart";
 import OrderReview from "../OrderReview/OrderReview";
-import "./Orders.css";
-import { useState } from "react";
 import { deleteShoppingCart, removeFromDb } from "../utilities/fakedb";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faCreditCard, faPlay } from "@fortawesome/free-solid-svg-icons";
+import "./Orders.css";
 
 const Orders = () => {
   const savedCart = useLoaderData();
-  const [cart, setCart] = useState([savedCart]);
+  const [cart, setCart] = useState(savedCart);
 
   const handleRemoveFromCart = (id) => {
-    //! please fix this 17 number line after error: product is not defined;
-    const remaining = cart.filter((product) => product._id !== id);
+    console.log(id);
+    const remaining = cart.filter((item) => item._id !== id); // Changed 'product' to 'item'
     setCart(remaining);
     removeFromDb(id);
   };
